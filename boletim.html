@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <script src="js/bootstrap/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Lista de Moedas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gruppo&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <link rel="shortcut icon" href="img/logo.png" />
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+    <a href="index.html"
+      ><img
+        style="max-width: 50px"
+        class="navbar-brand"
+        href="index.html"
+        src="img/logo.png"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="listaMoedas.html">Lista de Moedas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cotDolar.html">Cotação Dolar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cotMoedas.html">Cotação Outras Moedas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="boletim.html">Boletim</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="grafico.html">Gráfico</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <body>
+    <div id="div-container" class="container">
+      <div id="div-content-dolar" class="content-dolar">
+        <h1 class="header-title">Boletim</h1>
+        <hr />
+        <div class="row">
+          <div class="form-group">
+            <div class="moedas">
+              <h3>Cotação:</h3>
+              <label>Moeda:</label>
+              <select
+                id="select-cot-moeda"
+                class="form-control form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example"
+              >
+                <option selected>Escolha uma moeda</option>
+              </select>
+              <label>Data :</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dt-moedas"
+                placeholder="Mês-Dia-Ano"
+              />
+              <button id="btn-moedas" class="btn btn-success btn-pesquisa">
+                Pesquisar
+              </button>
+              <table class="table-dolar table">
+                <thead id="thead-Moeda">
+                  <tr>
+                    <th>Paridade de compra</th>
+                    <th>Paridade de Venda</th>
+                    <th>Cotação de compra</th>
+                    <th>Cotação de Venda</th>
+                    <th>Data e Hora da Cotação</th>
+                    <th>Tipo de Boletim</th>
+                  </tr>
+                </thead>
+
+                <tbody id="tbody-dados-Moeda">
+                  <tr>
+                    <td></td>
+
+                    <td></td>
+
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="dolar-periodo">
+              <h3>Cotação por período:</h3>
+              <label>Moeda:</label>
+              <select
+                id="select-cot-moedaP"
+                class="form-control form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example"
+              >
+                <option selected>Escolha uma moeda</option>
+              </select>
+              <label>Data Inicio:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dt-moedas-ini"
+                placeholder="Mês-Dia-Ano"
+              />
+              <label>Data Final:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dt-moedas-fim"
+                placeholder="Mês-Dia-Ano"
+              />
+              <button id="btn-moedasP" class="btn btn-success btn-pesquisa">
+                Pesquisar
+              </button>
+              <table class="table-dolarP table">
+                <thead id="thead-moedasP">
+                  <tr>
+                    <th>Paridade de compra</th>
+                    <th>Paridade de Venda</th>
+                    <th>Cotação de compra</th>
+                    <th>Cotação de Venda</th>
+                    <th>Data e Hora da Cotação</th>
+                    <th>Tipo de Boletim</th>
+                  </tr>
+                </thead>
+
+                <tbody id="tbody-dados-MoedaP">
+                  <tr>
+                    <td></td>
+
+                    <td></td>
+
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script>
+      select("select-cot-moeda");
+      select("select-cot-moedaP");
+    </script>
+  </body>
+</html>

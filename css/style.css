@@ -1,0 +1,123 @@
+body {
+    background-image: url(../img/wp-1.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.bg-nav {
+    background-color: #d6c9b0;
+    border-bottom: 2px solid black;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-index {
+    background-color: white;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: 65vh;
+    border-radius: 5px;
+    box-shadow: 15px 15px 10px gray;
+}
+
+.container h3 {
+    align-items: flex-start;
+    margin-top: 0;
+}
+
+.row {
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-pesquisa {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.result {
+    font-size: 40px;
+    color: green !important;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #ebebeb;
+    opacity: 0.8;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    box-shadow: inset 0px 5px 7px 5px #dadada;
+    height: 10vh;
+
+}
+
+.table-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-moedas {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.content-dolar {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 15px 15px 10px gray;
+    margin-bottom: 10px;
+}
+
+.content-dolar h1 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.dolar {
+    margin-top: 10px;
+}
+
+.content-lista {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 15px 15px 10px gray;
+    margin-bottom: 10px;
+}
+
+.content-lista h1 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.table {
+    border: 1px solid rgba(83, 83, 83, 0.5);
+    border-radius: 5px;
+}
+
+.grafico {
+    margin: 15px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <script src="js/bootstrap/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Lista de Moedas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gruppo&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <link rel="shortcut icon" href="img/logo.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+    <a href="index.html"
+      ><img
+        style="max-width: 50px"
+        class="navbar-brand"
+        href="index.html"
+        src="img/logo.png"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="listaMoedas.html">Lista de Moedas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cotDolar.html">Cotação Dolar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cotMoedas.html">Cotação Outras Moedas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="boletim.html">Boletim</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="grafico.html">Gráfico</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <body>
+    <div id="div-container" class="container">
+      <div id="div-content-dolar" class="content-dolar">
+        <h1 class="header-title">Gráfico</h1>
+        <hr />
+        <div class="grafico form-group">
+          <div class="row">
+            <div class="col-md-3 mt-3">
+              <label>Moeda:</label>
+              <select
+                id="select-moeda-grafico"
+                class="form-control form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example"
+              >
+                <option selected>Escolha uma moeda</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>Data Inicio:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dt-moedas-graf-ini"
+                placeholder="Mês-Dia-Ano"
+              />
+            </div>
+            <div class="col-md-3">
+              <label>Data Final:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dt-moedas-graf-fim"
+                placeholder="Mês-Dia-Ano"
+              />
+            </div>
+            <div class="col-md-3 mt-1">
+              <label></label>
+              <button id="btn-grafico" class="btn btn-success btn-pesquisa">
+                Pesquisar
+              </button>
+            </div>
+          </div>
+          <hr />
+          <div class="col-xl-12" id="GraficoContainer">
+            <canvas id="grafico" class="line-chart col-xl-12"> </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script>
+      select("select-moeda-grafico");
+    </script>
+  </body>
+</html>
